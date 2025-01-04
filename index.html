@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>para minha fumacita</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*ANIVERSARIANTE BEM-VINDA</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			Oi Leticia !<br />
+			Você sabia que, desde o momento em que nossos olhos se cruzaram, tudo ganhou um brilho diferente?<br />
+			<span class="comments">// Baixando Memorias... </span><br />
+			Como o verde que você tanto ama, sua presença é a cor que ilumina os meus dias, um refúgio de paz em meio ao caos.;<br />
+			<br>
+			<span class="comments">// Instalando Memorias...</span><br />
+			<br>
+			Cada sorriso seu é como o primeiro raio de sol após uma longa noitee sua voz tem o poder de transformar qualquer silêncio em uma doce melodia;<br />
+			Nosso caminho nem sempre foi fácil, mas assim como as árvores mais fortes resistem às tempestades, o que construímos cresce e se fortalece com o tempo;<br />
+			Em cada palavra sua, encontro abrigo; em cada olhar, um universo inteiro para explorar.;<br />
+			Tudo o que quero dizer, hoje e sempre, é que meu amor por você é infinito, como as estrelas que iluminam o céu.;<br />
+			E, não importa o que venha, estarei aqui, ao seu lado, para viver cada instante com você;<br />
+			E, enquanto eu viver, prometo que farei de tudo para te fazer sorrir;<br />
+			<br>
+			<span class="comments">// instalação concluida encerrando o programa.</span><br />
+			Bom, antes de eu ir embora quero dizer que, pra mim voce é um amor  que eu almejo ter;<br />
+			<br>
+			<br>
+			Todo lo que quiero decir es:<br />
+			Baby, I will love you forever;<br />
+			<br>
+			<br>
+			Agora, se você quiser me abraçar, pode tocar no coração abaixo.<br />
+			<br>
+			<span id="heartspan">
+			<a href="image.gif"><i class="fas fa-heart" id="icon"></i></a>
+			</span>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					A contagem da sua história começou aqui
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					Feliz aniversario<br/>
+					<div class="signature">- Gustavo</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(07, 1, 05);
+together.setHours(0);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>
